@@ -9,11 +9,13 @@ public class MyFirstServlet extends HttpServlet{
 	/**
 	 * 
 	 */
-	
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 				throws IOException
 	{
 		String color = request.getParameter("color");
 		System.out.println(color);
+		
+		Dog dog = (Dog) getServletContext().getAttribute("dog");
+		System.out.println(dog.getBreed());
 	}
 }

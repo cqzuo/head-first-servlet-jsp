@@ -14,4 +14,22 @@
     <servlet-name>myFirstServlet</servlet-name>
     <url-pattern>/myServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>listenerTest</servlet-name>
+    <servlet-class>com.bluesky.ListenerTester</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>listenerTest</servlet-name>
+    <url-pattern>/listener</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>breed</param-name>
+  	<param-value>Great Dane</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>com.bluesky.MyServletContextListener</listener-class>
+  </listener>
 </web-app>
